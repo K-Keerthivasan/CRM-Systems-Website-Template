@@ -49,6 +49,8 @@
 }
 
 :root {
+  --k2-demo-top-offset: 48px;
+  --k2-demo-bottom-offset: 40px;
   --background: #f6faff;
   --foreground: #0f172a;
   --font-geist-sans: "Geist", "Segoe UI", sans-serif;
@@ -129,6 +131,8 @@
   }
   body {
     @apply bg-background font-sans text-foreground;
+    padding-top: var(--k2-demo-top-offset);
+    padding-bottom: var(--k2-demo-bottom-offset);
     background-image:
       radial-gradient(circle at top, rgba(14, 165, 233, 0.12), transparent 26%),
       linear-gradient(180deg, #f8fbff 0%, #eef5ff 45%, #e2ecf8 100%);
@@ -140,6 +144,13 @@
   ::selection {
     background: rgba(6, 182, 212, 0.28);
     color: #f8fafc;
+  }
+}
+
+@media (min-width: 640px) {
+  :root {
+    --k2-demo-top-offset: 44px;
+    --k2-demo-bottom-offset: 36px;
   }
 }
 

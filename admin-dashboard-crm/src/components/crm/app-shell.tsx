@@ -162,11 +162,12 @@ export function AppShell({ children }: PropsWithChildren) {
         <div className="flex min-w-0 flex-col">
           <header
             className={cn(
-              "sticky top-0 z-20 border-b backdrop-blur-xl",
+              "sticky z-20 border-b backdrop-blur-xl",
               isDark
                 ? "border-white/10 bg-slate-950/60"
                 : "border-slate-200 bg-white/80"
             )}
+            style={{ top: "var(--k2-demo-top-offset)" }}
           >
             <div className="flex flex-col gap-4 px-4 py-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
               <div className="flex items-center gap-3">

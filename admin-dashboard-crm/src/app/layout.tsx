@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import "./globals.css";
+import { K2DemoBanner } from "@/components/k2-demo-banner";
 import { Providers } from "@/components/providers";
 
 export const metadata: Metadata = {
@@ -39,7 +40,10 @@ export default function RootLayout({
             `,
           }}
         />
-        <Providers>{children}</Providers>
+        <Providers>
+          <K2DemoBanner />
+          {children}
+        </Providers>
       </body>
     </html>
   );
